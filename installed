@@ -1,0 +1,14 @@
+echo """
+  _____           _        _ _          _ 
+ |_   _|         | |      | | |        | |
+   | |  _ __  ___| |_ __ _| | | ___  __| |
+   | | | |_ \/ __| __/ _| | | |/ _ \/ _| |
+  _| |_| | | \__ \ || (_| | | |  __/ (_| |
+ |_____|_| |_|___/\__\__|_|_|_|\___|\__|_|
+                                          
+                                          
+If error says 'yum: command not found' contact me &
+ill make a install file for your operating system.
+ /!\ http://twitter.com/codingplanets /!\
+"""
+./menu

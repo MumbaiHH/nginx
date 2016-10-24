@@ -1,0 +1,191 @@
+#!/bin/bash
+BLACK='\e[0;30m'
+BLUE='\e[0;34m'
+GREEN='\e[0;32m'
+CYAN='\e[0;36m'
+RED='\e[0;31m'
+PURPLE='\e[0;35m'
+BROWN='\e[0;33m'
+LIGHTGRAY='\e[0;37m'
+DARKGRAY='\e[1;30m'
+LIGHTBLUE='\e[1;34m'
+LIGHTGREEN='\e[1;32m'
+LIGHTCYAN='\e[1;36m'
+LIGHTRED='\e[1;31m'
+LIGHTPURPLE='\e[1;35m'
+YELLOW='\e[1;33m'
+WHITE='\e[1;37m'
+NC='\e[0m'
+
+exit_script()
+{
+  echo " "
+  ./menu
+}
+
+
+
+poc()
+{
+    clear
+    echo -e " ${CYAN} "
+	echo "   /!\------------------------------------------------------------------/!\ "
+    echo "   ¦¦¦                    PoC - Proof of Concept                        ¦¦¦ "
+    echo " "                                                         
+echo """
+Yes we all know what nginx is, We've seen it on a web-server before maybe even  just browsing the web.
+It is literally everywhere, The exploit consists of their handlers for scripts,
+Their was exactly five i found that was interesting, 
+One of them was one that would act as of ping-back exploits for DDoSing, 
+but the one I'm showing you guys is one that was hitting at 200GB/s with 2,000  exploited nginx boxes, 
+& it consists of using a a "PoD" aka "Ping of Death" i mentioned this in some of my other tweets, 
+Now you're think, well do you have to look for older versions of Windows & 
+Linux devices that can preform the "PoD." My response is, No,
+The exploit I've found is will use it's payload to run the  "PoD" exploit, 
+The "PoD" exploit i discovered will remain private due to misuse of it, 
+If you want to ask more questions please feel free to ask me them on twitter    @codingplanets 
+"""
+read enter
+clear
+    
+}
+
+scanner()
+{
+    clear
+    echo -e " ${BLUE} "
+	echo "  +-----------------------------------------------------------------------+ "
+    echo "  ¦¦¦                        /!\ NGINX Scanner /!\                      ¦¦¦ "
+    echo "  +-----------------------------------------------------------------------+ "                                                         
+    echo -e "  ¦¦¦${CYAN}                              ${CYAN}                                     ¦¦¦ " 
+    echo -e "  ¦¦¦${CYAN}                               ${CYAN}                                    ¦¦¦ " 
+    echo -e "  ¦¦¦${CYAN}                                 ${BLUE}                                  ¦¦¦ "
+    echo -e "  ¦¦¦${BLUE}                             ${GREEN}                                      ¦¦¦ "
+    echo "  +-----------------------------------------------------------------------+ "
+    echo "  ¦¦¦                           Version 1.0                             ¦¦¦ "
+    echo "  ¦¦¦+--------------------------------------------------------------------¦ " 
+    echo "  ¦¦¦                                                                   ¦¦¦ "
+    echo "  +-----------------------------------------------------------------------+ "
+echo " /!\ After redirected to menu, check nginx.txt for list to DDoS with /!\ "
+echo " "
+echo "Enter amount:"
+read ip
+./scanner $ip >>nginx.txt
+}
+
+ddos()
+{
+    clear
+    echo -e " ${BLUE} "
+	echo "  +-----------------------------------------------------------------------+ "
+    echo "  ¦¦¦                        /!\ NGINX DDoS /!\                      ¦¦¦ "
+    echo "  +-----------------------------------------------------------------------+ "                                                         
+    echo -e "  ¦¦¦${CYAN}                              ${CYAN}                             ¦¦¦ " 
+    echo -e "  ¦¦¦${CYAN}                               ${CYAN}                              ¦¦¦ " 
+    echo -e "  ¦¦¦${CYAN}                                 ${BLUE}                                ¦¦¦ "
+    echo -e "  ¦¦¦${BLUE}                             ${GREEN}                          ¦¦¦ "
+    echo "  +-----------------------------------------------------------------------+ "
+    echo "  ¦¦¦                           Version 1.0                             ¦¦¦ "
+    echo "  ¦¦¦+--------------------------------------------------------------------¦ " 
+    echo "  ¦¦¦                                                                ¦¦¦ "
+    echo "  +-----------------------------------------------------------------------+ "
+echo "/!\ DDoS function has its own help menu /!\ "
+echo "   /!\ Help Usage: python nginx.py /!\ "
+echo "    Press enter then type "6" to exit"
+echo " "
+echo -e -n "Press enter to continue..."
+read enter
+	
+
+}
+
+
+
+setup()
+{
+
+clear
+./setup
+}
+
+credits()
+{
+    clear
+    echo -e " ${BLUE} "
+	echo "  +-----------------------------------------------------------------------+ "
+    echo "  ¦¦¦                          /!\ Credits     /!\                      ¦¦¦ "
+    echo "  +-----------------------------------------------------------------------+ "                                                         
+    echo -e "  ¦¦¦${CYAN}                              ${CYAN}                             ¦¦¦ " 
+    echo -e "  ¦¦¦${CYAN}                               ${CYAN}                              ¦¦¦ " 
+    echo -e "  ¦¦¦${CYAN}                                 ${BLUE}                                ¦¦¦ "
+    echo -e "  ¦¦¦${BLUE}                             ${GREEN}                          ¦¦¦ "
+    echo "  +-----------------------------------------------------------------------+ "
+    echo "  ¦¦¦                           Version 1.0                             ¦¦¦ "
+    echo "  ¦¦¦+--------------------------------------------------------------------¦ " 
+    echo "  ¦¦¦                                                                ¦¦¦ "
+    echo "  +-----------------------------------------------------------------------+ "
+echo "Exploit found by security researcher/programmer Chris Poole | @codingplanets"
+echo "If there's any bugs or errors please report to @codingplanets on Twitter."
+echo "NGINX declined the vulnerability so I'm bringing amongst myself to show It's a"
+echo "very exploitable program, They thought no harm when i showed my PoC/Proof of    Concept"
+echo "Well guess what? 400 devices with NGINX can preform DDoS attacks at 200GB/s."
+echo "Do i approve of DDoS attacking with prior permission? Do as you please."
+echo "There's tons of other ways i can exploit these NGINX boxes not just including   DDoS attacks,"
+echo "I can use this exploit to csrf my way into a website even with mod_security &   CloudFlare."
+echo "At this point from the PoC and here you should get the feel of how this works,  If you"
+echo "need any help or need to report errors please contact @codingplanets via        Twitter."
+echo "Version two will come very soon, But will need to be paid for because of the    severity of the exploit it will contain"
+echo "PS: Have a nice day! -Chris Poole"
+read enter
+}
+
+exit_script1()
+{
+  exit 1
+}
+
+Take_input1()
+{
+clear
+while :
+do
+clear
+echo -e "${WHITE}                  Coded by Chris Poole | @codingplanets ${RED}  """
+echo -e "${WHITE}                                                
+                            "${WHITE}Your Version: "${GREEN}1.0 "
+echo """
+        _  _ ____ _ _  _ _  _          ____ _  _ ___  _    ____ _ ___ 
+        |\ | | __ | |\ |  \/     __    |___  \/  |__] |    |  | |  |  
+        | \| |__] | | \| _/\_          |___ _/\_ |    |___ |__| |  |  
+"""
+                                                             
+    echo -e "${GREEN}/!\_________________________________________________________________________/!\ "
+    echo -e "${PURPLE}                             /!\ MAIN OPTIONS /!\                                     "
+	echo -e "${LIGHTBLUE}  [1]${GREEN}NGINX Scanner${LIGHTBLUE}                                             [2]${GREEN}NGINX DDoS${LIGHTBLUE}"                                                                                         																									
+    echo -e ""                                                                 
+    echo -e "${PURPLE}/!\_________________________________________________________________________/!\ "
+    echo -e "${PURPLE}                         /!\ Knowledge & Credits /!\                        "
+    echo -e "${LIGHTBLUE}  [3]${GREEN}Delete History${LIGHTBLUE}                                            [4]${GREEN}Installer"
+	echo -e "${LIGHTBLUE}  [5]${GREEN}PoC${LIGHTBLUE}                                                       [6]${GREEN}Kill Menu"
+	echo -e "${LIGHTBLUE}  [7]${GREEN}Credits${LIGHTBLUE}                                                   [8]${GREEN}Exit Menu"
+    echo -e ""
+    echo -n "root@NGINX-Exploit:~/1-8# "
+    read yourch
+    case $yourch in
+      1) scanner ;;
+      2) ddos ;;
+      3) rm ~/.bash_history; history -c; logout ;;
+	  4) setup ;;
+	  5) poc ;;
+      ex) echo "As you Command" ;  exit 1  ;;
+	  6) pkill menu  ;;
+	  7) credits ;;
+      *) echo "Invalid Selection, Please make another selection between [1-11]" ;
+         echo "Press Enter. . ." ; read ;;
+ esac
+done
+}
+
+trap exit_script 2
+
+Take_input1
